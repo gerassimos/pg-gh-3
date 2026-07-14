@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: curl
+spec:
+  selector:
+    matchLabels:
+      app: curl
+  template:
+    metadata:
+      labels:
+        app: curl
+    spec:
+      containers:
+        - image: curlimages/curl  # uid=100(curl_user) gid=101(curl_group) groups=101(curl_group)
+          name: curl
+          command: ["/bin/sleep", "3650d"]
