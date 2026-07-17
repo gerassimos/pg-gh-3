@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Octocat – GitHub Mascot</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background: #0d1117;
+      color: #c9d1d9;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #f0f6fc;
+      letter-spacing: -0.5px;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      color: #8b949e;
+      font-size: 1.05rem;
+    }
+
+    .octocat-container {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 16px;
+      padding: 2.5rem 3rem;
+      text-align: center;
+      max-width: 480px;
+      width: 100%;
+      box-shadow: 0 8px 24px rgba(1, 4, 9, 0.5);
+    }
+
+    .octocat-svg {
+      width: 180px;
+      height: 180px;
+      margin-bottom: 1.5rem;
+      animation: wave 2.5s ease-in-out infinite;
+      transform-origin: 70% 70%;
+    }
+
+    @keyframes wave {
+      0%,100% { transform: rotate(0deg); }
+      15%      { transform: rotate(14deg); }
+      30%      { transform: rotate(-8deg); }
+      45%      { transform: rotate(14deg); }
+      60%      { transform: rotate(-4deg); }
+      75%      { transform: rotate(10deg); }
+    }
+
+    .octocat-container h2 {
+      font-size: 1.4rem;
+      color: #f0f6fc;
+      margin-bottom: 0.75rem;
+    }
+
+    .octocat-container p {
+      color: #8b949e;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .badge {
+      background: #21262d;
+      border: 1px solid #30363d;
+      border-radius: 20px;
+      padding: 0.3rem 0.9rem;
+      font-size: 0.8rem;
+      color: #c9d1d9;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 1.75rem;
+      padding: 0.6rem 1.4rem;
+      background: #238636;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    .btn:hover { background: #2ea043; }
+
+    footer {
+      margin-top: 2.5rem;
+      color: #484f58;
+      font-size: 0.8rem;
+      text-align: center;
+    }
+
+    footer a { color: #58a6ff; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1><span aria-hidden="true">&#128025;</span> Hello, Octocat!</h1>
+    <p>The friendly face of GitHub</p>
+  </header>
+
+  <div class="octocat-container">
+    <!-- GitHub's official Octocat SVG (public domain / GitHub brand) -->
+    <svg class="octocat-svg" role="img" viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg">
+      <title>Octocat</title>
+      <!-- body -->
+      <path d="M125,30 C71,30 28,73 28,127 C28,169.5 54.5,205.5 92,217.5
+               C96.5,218.3 98.2,215.5 98.2,213.2 C98.2,211.1 98.1,205.3 98.1,198.1
+               C73,203.5 67.8,185.8 67.8,185.8 C63.7,175.5 57.8,172.8 57.8,172.8
+               C49.7,167.2 58.4,167.3 58.4,167.3 C67.3,167.9 72,176.5 72,176.5
+               C79.9,190.2 93,186 98.4,183.7 C99.2,177.8 101.5,173.8 104.1,171.5
+               C83.9,169.1 62.6,161.3 62.6,126 C62.6,116.3 66,108.3 72.2,102
+               C71.2,99.6 68.1,90.4 73.1,77.9 C73.1,77.9 80.6,75.3 98,87.2
+               C105.3,85.1 113.2,84 121,84 C128.8,84 136.7,85.1 144,87.2
+               C161.4,75.3 168.9,77.9 168.9,77.9 C173.9,90.4 170.8,99.6 169.8,102
+               C176,108.3 179.4,116.3 179.4,126 C179.4,161.4 158,169.1 137.8,171.4
+               C141.1,174.3 144,179.9 144,188.5 C144,201 143.9,211 143.9,213.2
+               C143.9,215.5 145.6,218.4 150.2,217.5 C187.5,205.5 214,169.5 214,127
+               C214,73 171,30 125,30 Z"
+            fill="#24292f"/>
+      <!-- left ear -->
+      <path d="M90,50 L110,80 L75,85 Z" fill="#24292f"/>
+      <!-- right ear -->
+      <path d="M160,50 L140,80 L175,85 Z" fill="#24292f"/>
+    </svg>
+
+    <h2>Meet Octocat</h2>
+    <p>
+      Octocat is the beloved mascot of GitHub — part octopus, part cat,
+      and entirely iconic. Since 2008, Octocat has welcomed millions of
+      developers to the world's largest code-hosting platform.
+    </p>
+
+    <div class="badge-row">
+      <span class="badge"><span aria-hidden="true">&#127758;</span> Open Source</span>
+      <span class="badge"><span aria-hidden="true">&#128187;</span> GitHub</span>
+      <span class="badge"><span aria-hidden="true">&#129420;</span> Part Octopus</span>
+      <span class="badge"><span aria-hidden="true">&#128049;</span> Part Cat</span>
+    </div>
+
+    <a class="btn" href="https://github.com" target="_blank" rel="noopener noreferrer">
+      Visit GitHub &#8599;
+    </a>
+  </div>
+
+  <footer>
+    <p>Built with <span aria-hidden="true">&#10084;&#65039;</span> for <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+  </footer>
+
+</body>
+</html>
