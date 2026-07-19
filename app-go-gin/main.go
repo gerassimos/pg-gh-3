@@ -19,5 +19,9 @@ func main() {
 		c.String(http.StatusOK, fmt.Sprintf("hello from %s", h))
 	})
 
+	r.GET("/health", func(c *gin.Context) {
+		c.String(http.StatusOK, "ok")
+	})
+
 	_ = r.Run(":8080")
 }
